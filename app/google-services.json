@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "922614968873",
+    "firebase_url": "https://water-me-433c0-default-rtdb.firebaseio.com",
+    "project_id": "water-me-433c0",
+    "storage_bucket": "water-me-433c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922614968873:android:d548edb70a4e50e6ce6238",
+        "android_client_info": {
+          "package_name": "com.example.waterme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922614968873-tc9da3dqdvmp196saur550m8pcmhbgbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3GXCDG4RYlply_WBtFTHptad11Kdf94w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922614968873-tc9da3dqdvmp196saur550m8pcmhbgbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
