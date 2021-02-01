@@ -17,6 +17,7 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
     String time = "null";
     Double soilMoisture = 0.0;
+    Double percentage = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 if(dataEntry!=null) {
                     Object uid = dataEntry.keySet().toArray()[0];
                     HashMap dataValues = (HashMap) dataEntry.get(uid);
-                    time = dataValues.get("Time").toString();
+                    time = dataValues.get("Time Elapsed").toString();
                     soilMoisture = Double.parseDouble(dataValues.get("Soil Moisture").toString());
+                    percentage = Double.parseDouble(dataValues.get("Moisture Percentage").toString());
                     updateMessage();
                 }
             }
@@ -47,13 +49,18 @@ public class MainActivity extends AppCompatActivity {
 
     protected void updateMessage(){
         TextView messageText = (TextView)findViewById(R.id.messageText);
+        TextView percentageText = (TextView)findViewById(R.id.percentageText);
         TextView timeText = (TextView)findViewById(R.id.timeText);
+        percentageText.setText("Percentage: "+percentage);
         timeText.setText("Time: "+time);
-        if(soilMoisture > 0) {
+        if(percentage > 50) {
             messageText.setText("I am full!");
         }
+        else if(percentage > 30){
+            messageText.setText("Hey, I am kinda thirsty.");
+        }
         else{
-            messageText.setText("I am thirsty!");
+            messageText.setText("Yo, I think I'll die.");
         }
 
     }
